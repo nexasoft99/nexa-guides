@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Guides gratuits pour les étudiants étrangers en France : titre de séjour, job étudiant. Par Nexa Students.">
+<meta property="og:title" content="Guides gratuits Nexa Students">
+<meta property="og:description" content="Titre de séjour, job étudiant : les démarches expliquées simplement.">
+<meta property="og:image" content="img/titre-1.jpg">
+<title>Guides Nexa Students</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;800;900&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+  body { margin: 0; }
+  img { max-width: 100%; }
+  [hidden] { display: none !important; }
+  /* Layout : une colonne façon « dossier » — en-tête bleu nuit, puis une carte par guide, lecture des pages en dessous. */
+  :root {
+    --ink: #10162A;
+    --paper: #F5F1E8;
+    --card: #FFFFFF;
+    --line: #DDD5C4;
+    --muted: #5C6274;
+    --amber: #E8962A;
+    --amber-soft: #FBE7C6;
+    --green: #1F8A5B;
+    --head-bg: #10162A;
+    --head-fg: #F5F1E8;
+    --font-display: "Archivo", "Arial Black", system-ui, sans-serif;
+    --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #EDE8DD; --paper: #0D1222; --card: #161C30; --line: #2A3150; --muted: #A3A9BA;
+      --amber: #F2A93B; --amber-soft: #3A2A12; --green: #3CC58A; --head-bg: #070A14; --head-fg: #F5F1E8;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #EDE8DD; --paper: #0D1222; --card: #161C30; --line: #2A3150; --muted: #A3A9BA;
+    --amber: #F2A93B; --amber-soft: #3A2A12; --green: #3CC58A; --head-bg: #070A14; --head-fg: #F5F1E8;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.55; }
+  .wrap { max-width: 760px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+
+  header { background: var(--head-bg); color: var(--head-fg); }
+  header .wrap { padding-block: 34px 30px; display: grid; gap: 14px; }
+  .tag { display: inline-flex; align-items: center; gap: 8px; width: fit-content; font-family: var(--font-display); font-weight: 800; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; background: #E8962A; color: #10162A; padding: 5px 10px; border-radius: 6px; }
+  h1 { font-family: var(--font-display); font-weight: 900; font-size: clamp(30px, 7vw, 46px); line-height: 1.02; margin: 0; text-wrap: balance; }
+  h1 span { color: #F2A93B; }
+  header p { margin: 0; max-width: 54ch; color: #C9CCD6; }
+
+  main .wrap { padding-block: 26px 40px; display: grid; gap: 22px; }
+  .guide { background: var(--card); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; }
+  .guide-head { display: grid; grid-template-columns: 112px 1fr; gap: 16px; padding: 16px; align-items: center; }
+  .guide-head img { width: 112px; height: auto; aspect-ratio: 910 / 1287; object-fit: cover; border-radius: 8px; border: 1px solid var(--line); max-width: 100%; }
+  .meta { min-width: 0; display: grid; gap: 6px; }
+  .kicker { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--amber); }
+  h2 { font-family: var(--font-display); font-weight: 800; font-size: 22px; line-height: 1.15; margin: 0; text-wrap: balance; }
+  .meta p { margin: 0; color: var(--muted); font-size: 15px; }
+  .toggle { justify-self: start; margin-top: 6px; font: 700 15px var(--font-body); background: var(--amber); color: #10162A; border: 0; border-radius: 999px; padding: 10px 18px; cursor: pointer; }
+  .toggle:focus-visible, .ig:focus-visible { outline: 3px solid var(--green); outline-offset: 2px; }
+  .pages { display: grid; gap: 14px; padding: 0 16px 18px; }
+  .pages img { width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--line); display: block; }
+  .pages .count { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+
+  .follow { background: var(--amber-soft); border-radius: 18px; padding: 20px; display: grid; gap: 10px; }
+  .follow h2 { font-size: 20px; }
+  .follow p { margin: 0; }
+  .ig { display: inline-block; width: fit-content; font-weight: 700; color: var(--ink); text-decoration: none; border-bottom: 2px solid var(--amber); }
+  .handle { font-family: var(--font-display); font-weight: 800; font-size: 20px; }
+  footer { font-size: 13px; color: var(--muted); }
+  footer .wrap { padding-block: 0 36px; }
+  @media (max-width: 420px) {
+    .guide-head { grid-template-columns: 84px 1fr; gap: 12px; }
+    .guide-head img { width: 84px; }
+    h2 { font-size: 19px; }
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .pages img { animation: rise 0.35s ease-out both; }
+    @keyframes rise { from { transform: translateY(6px); opacity: 0.6; } to { transform: none; opacity: 1; } }
+  }
+</style>
+
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <span class="tag">Nexa Students · Étranger 3.0</span>
+    <h1>Tes guides <span>gratuits</span></h1>
+    <p>Les démarches des étudiants étrangers en France, expliquées simplement. Lis-les ici, page par page. Aucune inscription.</p>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section class="guide" id="titre">
+      <div class="guide-head">
+        <img src="img/titre-1.jpg" alt="Couverture du guide Renouveler son titre de séjour" width="910" height="1287">
+        <div class="meta">
+          <span class="kicker">Dossier n°004 · 6 pages</span>
+          <h2>Renouveler son titre de séjour</h2>
+          <p>Quand déposer sur l'ANEF, l'attestation qui te protège, la checklist des documents.</p>
+          <button class="toggle" type="button" id="btn-titre" aria-expanded="false" aria-controls="pages-titre">Lire le guide</button>
+        </div>
+      </div>
+      <div class="pages" id="pages-titre" hidden></div>
+    </section>
+
+    <section class="guide" id="job">
+      <div class="guide-head">
+        <img src="img/job-1.jpg" alt="Couverture du guide Job étudiant et titre de séjour" width="910" height="1287">
+        <div class="meta">
+          <span class="kicker">Dossier n°003 · 6 pages</span>
+          <h2>Job étudiant &amp; titre de séjour</h2>
+          <p>Combien d'heures tu peux travailler, et le cas des étudiants algériens (APT).</p>
+          <button class="toggle" type="button" id="btn-job" aria-expanded="false" aria-controls="pages-job">Lire le guide</button>
+        </div>
+      </div>
+      <div class="pages" id="pages-job" hidden></div>
+    </section>
+
+    <section class="follow">
+      <h2>Un nouveau guide chaque semaine</h2>
+      <p>Titre de séjour, job, CAF, logement, Campus France. Abonne-toi pour ne rien rater, et pose ta question en message privé.</p>
+      <a class="ig" href="https://www.instagram.com/nexastudents.offciel/" target="_blank" rel="noopener">Instagram <span class="handle">@nexastudents.offciel</span></a>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    Informations générales vérifiées à la date indiquée dans chaque guide. Elles ne remplacent pas un conseil juridique personnalisé : vérifie toujours ta situation auprès de la préfecture. Non affilié à l'administration.
+  </div>
+</footer>
+
+<script>
+  const GUIDES = { titre: 6, job: 6 };
+  function open(key, scroll) {
+    const box = document.getElementById("pages-" + key);
+    const btn = document.getElementById("btn-" + key);
+    if (!box.dataset.loaded) {
+      for (let i = 1; i <= GUIDES[key]; i++) {
+        const img = document.createElement("img");
+        img.src = "img/" + key + "-" + i + ".jpg";
+        img.alt = "Page " + i + " sur " + GUIDES[key];
+        img.width = 910; img.height = 1287; img.loading = "lazy";
+        box.appendChild(img);
+      }
+      const c = document.createElement("span");
+      c.className = "count";
+      c.textContent = GUIDES[key] + " pages · fais une capture d'écran pour garder une page";
+      box.appendChild(c);
+      box.dataset.loaded = "1";
+    }
+    box.hidden = false;
+    btn.textContent = "Fermer le guide";
+    btn.setAttribute("aria-expanded", "true");
+    if (scroll) document.getElementById(key).scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+  function close(key) {
+    document.getElementById("pages-" + key).hidden = true;
+    const btn = document.getElementById("btn-" + key);
+    btn.textContent = "Lire le guide";
+    btn.setAttribute("aria-expanded", "false");
+  }
+  Object.keys(GUIDES).forEach((key) => {
+    document.getElementById("btn-" + key).addEventListener("click", () => {
+      const isOpen = !document.getElementById("pages-" + key).hidden;
+      isOpen ? close(key) : open(key, false);
+    });
+  });
+  function fromHash() {
+    const key = location.hash.replace("#", "");
+    if (GUIDES[key]) open(key, true);
+  }
+  window.addEventListener("hashchange", fromHash);
+  fromHash();
+</script>
+
+</body>
+</html>
