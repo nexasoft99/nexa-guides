@@ -91,7 +91,7 @@
   <div class="wrap">
     <span class="tag">Nexa Students · Étranger 3.0</span>
     <h1>Tes guides <span>gratuits</span></h1>
-    <p>Les démarches des étudiants étrangers en France, expliquées simplement. Lis-les ici, page par page. Aucune inscription.</p>
+    <p>Les démarches des étudiants étrangers en France, expliquées simplement : titre de séjour, job, caution, APL, arrivée, arnaques. Lis-les ici, page par page. Aucune inscription.</p>
   </div>
 </header>
 
@@ -123,6 +123,58 @@
       <div class="pages" id="pages-job" hidden></div>
     </section>
 
+    <section class="guide" id="caution">
+      <div class="guide-head">
+        <img src="img/caution-1.jpg" alt="Couverture du guide Récupérer ta caution" width="1080" height="1350">
+        <div class="meta">
+          <span class="kicker">Logement · 6 pages</span>
+          <h2>Récupérer ta caution</h2>
+          <p>Délais, pénalités, retenues et recours : ce que dit la loi.</p>
+          <button class="toggle" type="button" id="btn-caution" aria-expanded="false" aria-controls="pages-caution">Lire le guide</button>
+        </div>
+      </div>
+      <div class="pages" id="pages-caution" hidden></div>
+    </section>
+
+    <section class="guide" id="apl">
+      <div class="guide-head">
+        <img src="img/apl-1.jpg" alt="Couverture du guide APL et étudiants étrangers 2026" width="1080" height="1350">
+        <div class="meta">
+          <span class="kicker">CAF · 6 pages</span>
+          <h2>APL et étudiants étrangers 2026</h2>
+          <p>Qui garde l'aide, qui la perd, et quoi faire.</p>
+          <button class="toggle" type="button" id="btn-apl" aria-expanded="false" aria-controls="pages-apl">Lire le guide</button>
+        </div>
+      </div>
+      <div class="pages" id="pages-apl" hidden></div>
+    </section>
+
+    <section class="guide" id="visa">
+      <div class="guide-head">
+        <img src="img/visa-1.jpg" alt="Couverture du guide Valider ton VLS-TS" width="1080" height="1350">
+        <div class="meta">
+          <span class="kicker">Arrivée · 6 pages</span>
+          <h2>Valider ton VLS-TS</h2>
+          <p>Les 3 premiers mois en France, et le cas des étudiants algériens.</p>
+          <button class="toggle" type="button" id="btn-visa" aria-expanded="false" aria-controls="pages-visa">Lire le guide</button>
+        </div>
+      </div>
+      <div class="pages" id="pages-visa" hidden></div>
+    </section>
+
+    <section class="guide" id="arnaque">
+      <div class="guide-head">
+        <img src="img/arnaque-1.jpg" alt="Couverture du guide Éviter les arnaques au logement" width="1080" height="1350">
+        <div class="meta">
+          <span class="kicker">Logement · 6 pages</span>
+          <h2>Éviter les arnaques au logement</h2>
+          <p>Les signes qui doivent t'alerter, et quoi faire si c'est trop tard.</p>
+          <button class="toggle" type="button" id="btn-arnaque" aria-expanded="false" aria-controls="pages-arnaque">Lire le guide</button>
+        </div>
+      </div>
+      <div class="pages" id="pages-arnaque" hidden></div>
+    </section>
+
     <section class="follow">
       <h2>Un nouveau guide chaque semaine</h2>
       <p>Titre de séjour, job, CAF, logement, Campus France. Abonne-toi pour ne rien rater, et pose ta question en message privé.</p>
@@ -138,7 +190,7 @@
 </footer>
 
 <script>
-  const GUIDES = { titre: 6, job: 6 };
+  const GUIDES = { titre: 6, job: 6, caution: 6, apl: 6, visa: 6, arnaque: 6 };
   function open(key, scroll) {
     const box = document.getElementById("pages-" + key);
     const btn = document.getElementById("btn-" + key);
@@ -147,7 +199,7 @@
         const img = document.createElement("img");
         img.src = "img/" + key + "-" + i + ".jpg";
         img.alt = "Page " + i + " sur " + GUIDES[key];
-        img.width = 910; img.height = 1287; img.loading = "lazy";
+        img.width = key === 'titre' || key === 'job' ? 910 : 1080; img.height = key === 'titre' || key === 'job' ? 1287 : 1350; img.loading = "lazy";
         box.appendChild(img);
       }
       const c = document.createElement("span");
