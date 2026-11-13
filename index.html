@@ -188,6 +188,19 @@
       <div class="pages" id="pages-secu" hidden></div>
     </section>
 
+    <section class="guide" id="boulot">
+      <div class="guide-head">
+        <img src="img/boulot-1.jpg" alt="Couverture du guide Où trouver un job étudiant" width="1080" height="1350">
+        <div class="meta">
+          <span class="kicker">Job · 6 pages</span>
+          <h2>Où trouver un job étudiant</h2>
+          <p>3 endroits où chercher, et les réflexes qui font la différence.</p>
+          <button class="toggle" type="button" id="btn-boulot" aria-expanded="false" aria-controls="pages-boulot">Lire le guide</button>
+        </div>
+      </div>
+      <div class="pages" id="pages-boulot" hidden></div>
+    </section>
+
     <section class="follow">
       <h2>Un nouveau guide chaque semaine</h2>
       <p>Titre de séjour, job, CAF, logement, Campus France. Abonne-toi pour ne rien rater, et pose ta question en message privé.</p>
@@ -203,7 +216,7 @@
 </footer>
 
 <script>
-  const GUIDES = { titre: 6, job: 6, caution: 6, apl: 6, visa: 6, arnaque: 6, secu: 6 };
+  const GUIDES = { titre: 6, job: 6, caution: 6, apl: 6, visa: 6, arnaque: 6, secu: 6, boulot: 6 };
   function open(key, scroll) {
     const box = document.getElementById("pages-" + key);
     const btn = document.getElementById("btn-" + key);
