@@ -214,6 +214,19 @@
       <div class="pages" id="pages-valise" hidden></div>
     </section>
 
+    <section class="guide" id="garant">
+      <div class="guide-head">
+        <img src="img/garant-1.jpg" alt="Couverture du guide Pas de garant, Visale" width="1080" height="1350">
+        <div class="meta">
+          <span class="kicker">Logement · 6 pages</span>
+          <h2>Pas de garant ? Visale</h2>
+          <p>La garantie gratuite pour les étudiants de 18 à 30 ans : pour qui, comment, astuces.</p>
+          <button class="toggle" type="button" id="btn-garant" aria-expanded="false" aria-controls="pages-garant">Lire le guide</button>
+        </div>
+      </div>
+      <div class="pages" id="pages-garant" hidden></div>
+    </section>
+
     <section class="follow">
       <h2>Un nouveau guide chaque semaine</h2>
       <p>Titre de séjour, job, CAF, logement, Campus France. Abonne-toi pour ne rien rater, et pose ta question en message privé.</p>
@@ -229,7 +242,7 @@
 </footer>
 
 <script>
-  const GUIDES = { titre: 6, job: 6, caution: 6, apl: 6, visa: 6, arnaque: 6, secu: 6, boulot: 6, valise: 6 };
+  const GUIDES = { titre: 6, job: 6, caution: 6, apl: 6, visa: 6, arnaque: 6, secu: 6, boulot: 6, valise: 6, garant: 6 };
   function open(key, scroll) {
     const box = document.getElementById("pages-" + key);
     const btn = document.getElementById("btn-" + key);
