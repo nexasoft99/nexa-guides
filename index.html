@@ -91,7 +91,7 @@
   <div class="wrap">
     <span class="tag">Nexa Students · Étranger 3.0</span>
     <h1>Tes guides <span>gratuits</span></h1>
-    <p>Les démarches des étudiants étrangers en France, expliquées simplement : titre de séjour, job, caution, APL, arrivée, arnaques. Lis-les ici, page par page. Aucune inscription.</p>
+    <p>Les démarches des étudiants étrangers en France, expliquées simplement : titre de séjour, job, caution, APL, arrivée, Sécu, arnaques. Lis-les ici, page par page. Aucune inscription.</p>
   </div>
 </header>
 
@@ -175,6 +175,19 @@
       <div class="pages" id="pages-arnaque" hidden></div>
     </section>
 
+    <section class="guide" id="secu">
+      <div class="guide-head">
+        <img src="img/secu-1.jpg" alt="Couverture du guide Sécurité sociale et carte Vitale" width="1080" height="1350">
+        <div class="meta">
+          <span class="kicker">Arrivée · 6 pages</span>
+          <h2>Sécurité sociale et carte Vitale</h2>
+          <p>Les 4 étapes pour être remboursé quand tu es étudiant étranger.</p>
+          <button class="toggle" type="button" id="btn-secu" aria-expanded="false" aria-controls="pages-secu">Lire le guide</button>
+        </div>
+      </div>
+      <div class="pages" id="pages-secu" hidden></div>
+    </section>
+
     <section class="follow">
       <h2>Un nouveau guide chaque semaine</h2>
       <p>Titre de séjour, job, CAF, logement, Campus France. Abonne-toi pour ne rien rater, et pose ta question en message privé.</p>
@@ -185,12 +198,12 @@
 
 <footer>
   <div class="wrap">
-    Informations générales vérifiées à la date indiquée dans chaque guide. Elles ne remplacent pas un conseil juridique personnalisé : vérifie toujours ta situation auprès de la préfecture. Non affilié à l'administration.
+    Informations générales vérifiées à la date indiquée dans chaque guide. Elles ne remplacent pas un conseil juridique personnalisé : vérifie toujours ta situation auprès des services officiels. Non affilié à l'administration.
   </div>
 </footer>
 
 <script>
-  const GUIDES = { titre: 6, job: 6, caution: 6, apl: 6, visa: 6, arnaque: 6 };
+  const GUIDES = { titre: 6, job: 6, caution: 6, apl: 6, visa: 6, arnaque: 6, secu: 6 };
   function open(key, scroll) {
     const box = document.getElementById("pages-" + key);
     const btn = document.getElementById("btn-" + key);
