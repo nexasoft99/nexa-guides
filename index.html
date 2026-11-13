@@ -227,6 +227,19 @@
       <div class="pages" id="pages-garant" hidden></div>
     </section>
 
+    <section class="guide" id="courses">
+      <div class="guide-head">
+        <img src="img/courses-1.jpg" alt="Couverture du guide Manger pas cher quand on est étudiant" width="1080" height="1350">
+        <div class="meta">
+          <span class="kicker">Budget · 6 pages</span>
+          <h2>Manger pas cher quand on est étudiant</h2>
+          <p>Resto U, épiceries solidaires, et 4 astuces pour les courses.</p>
+          <button class="toggle" type="button" id="btn-courses" aria-expanded="false" aria-controls="pages-courses">Lire le guide</button>
+        </div>
+      </div>
+      <div class="pages" id="pages-courses" hidden></div>
+    </section>
+
     <section class="follow">
       <h2>Un nouveau guide chaque semaine</h2>
       <p>Titre de séjour, job, CAF, logement, Campus France. Abonne-toi pour ne rien rater, et pose ta question en message privé.</p>
@@ -242,7 +255,7 @@
 </footer>
 
 <script>
-  const GUIDES = { titre: 6, job: 6, caution: 6, apl: 6, visa: 6, arnaque: 6, secu: 6, boulot: 6, valise: 6, garant: 6 };
+  const GUIDES = { titre: 6, job: 6, caution: 6, apl: 6, visa: 6, arnaque: 6, secu: 6, boulot: 6, valise: 6, garant: 6, courses: 6 };
   function open(key, scroll) {
     const box = document.getElementById("pages-" + key);
     const btn = document.getElementById("btn-" + key);
