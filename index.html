@@ -292,6 +292,19 @@
       <div class="pages" id="pages-partiels" hidden></div>
     </section>
 
+    <section class="guide" id="budget">
+      <div class="guide-head">
+        <img src="img/budget-1.jpg" alt="Couverture du guide Tenir ton budget du mois" width="1080" height="1350">
+        <div class="meta">
+          <span class="kicker">Argent · 6 pages</span>
+          <h2>Tenir ton budget du mois</h2>
+          <p>La méthode simple en 3 étapes, et le piège qui vide ton compte.</p>
+          <button class="toggle" type="button" id="btn-budget" aria-expanded="false" aria-controls="pages-budget">Lire le guide</button>
+        </div>
+      </div>
+      <div class="pages" id="pages-budget" hidden></div>
+    </section>
+
     <section class="follow">
       <h2>Un nouveau guide chaque semaine</h2>
       <p>Titre de séjour, job, CAF, logement, Campus France. Abonne-toi pour ne rien rater, et pose ta question en message privé.</p>
@@ -307,7 +320,7 @@
 </footer>
 
 <script>
-  const GUIDES = { titre: 6, job: 6, caution: 6, apl: 6, visa: 6, arnaque: 6, secu: 6, boulot: 6, valise: 6, garant: 6, courses: 6, choc: 6, bibli: 6, forfait: 6, partiels: 6 };
+  const GUIDES = { titre: 6, job: 6, caution: 6, apl: 6, visa: 6, arnaque: 6, secu: 6, boulot: 6, valise: 6, garant: 6, courses: 6, choc: 6, bibli: 6, forfait: 6, partiels: 6, budget: 6 };
   function open(key, scroll) {
     const box = document.getElementById("pages-" + key);
     const btn = document.getElementById("btn-" + key);
