@@ -279,6 +279,19 @@
       <div class="pages" id="pages-forfait" hidden></div>
     </section>
 
+    <section class="guide" id="partiels">
+      <div class="guide-head">
+        <img src="img/partiels-1.jpg" alt="Couverture du guide Réussir tes partiels en France" width="1080" height="1350">
+        <div class="meta">
+          <span class="kicker">Fac · 6 pages</span>
+          <h2>Réussir tes partiels en France</h2>
+          <p>Ce qu'on attend de toi aux examens, et les 3 erreurs à éviter.</p>
+          <button class="toggle" type="button" id="btn-partiels" aria-expanded="false" aria-controls="pages-partiels">Lire le guide</button>
+        </div>
+      </div>
+      <div class="pages" id="pages-partiels" hidden></div>
+    </section>
+
     <section class="follow">
       <h2>Un nouveau guide chaque semaine</h2>
       <p>Titre de séjour, job, CAF, logement, Campus France. Abonne-toi pour ne rien rater, et pose ta question en message privé.</p>
@@ -294,7 +307,7 @@
 </footer>
 
 <script>
-  const GUIDES = { titre: 6, job: 6, caution: 6, apl: 6, visa: 6, arnaque: 6, secu: 6, boulot: 6, valise: 6, garant: 6, courses: 6, choc: 6, bibli: 6, forfait: 6 };
+  const GUIDES = { titre: 6, job: 6, caution: 6, apl: 6, visa: 6, arnaque: 6, secu: 6, boulot: 6, valise: 6, garant: 6, courses: 6, choc: 6, bibli: 6, forfait: 6, partiels: 6 };
   function open(key, scroll) {
     const box = document.getElementById("pages-" + key);
     const btn = document.getElementById("btn-" + key);
