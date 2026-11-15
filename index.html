@@ -526,6 +526,19 @@
       <div class="pages" id="pages-resto" hidden></div>
     </section>
 
+    <section class="guide" id="medecin">
+      <div class="guide-head">
+        <img src="img/medecin-1.jpg" alt="Couverture du guide Le médecin traitant" width="1080" height="1350">
+        <div class="meta">
+          <span class="kicker">Santé · 6 pages</span>
+          <h2>Le médecin traitant</h2>
+          <p>Pourquoi déclarer un médecin traitant, quand et comment le faire, et où vérifier.</p>
+          <button class="toggle" type="button" id="btn-medecin" aria-expanded="false" aria-controls="pages-medecin">Lire le guide</button>
+        </div>
+      </div>
+      <div class="pages" id="pages-medecin" hidden></div>
+    </section>
+
     <section class="follow">
       <h2>Un nouveau guide chaque semaine</h2>
       <p>Titre de séjour, job, CAF, logement, Campus France. Abonne-toi pour ne rien rater, et pose ta question en message privé.</p>
@@ -541,7 +554,7 @@
 </footer>
 
 <script>
-  const GUIDES = { titre: 6, job: 6, caution: 6, apl: 6, visa: 6, arnaque: 6, secu: 6, boulot: 6, valise: 6, garant: 6, courses: 6, choc: 6, bibli: 6, forfait: 6, partiels: 6, budget: 6, lettre: 6, entretien: 6, linkedin: 6, sport: 6, psy: 6, transport: 6, asso: 6, halal: 6, famille: 6, traduction: 6, banque: 6, stage: 6, assurance: 6, demenagement: 6, cvec: 6, arrivee: 6, resto: 6 };
+  const GUIDES = { titre: 6, job: 6, caution: 6, apl: 6, visa: 6, arnaque: 6, secu: 6, boulot: 6, valise: 6, garant: 6, courses: 6, choc: 6, bibli: 6, forfait: 6, partiels: 6, budget: 6, lettre: 6, entretien: 6, linkedin: 6, sport: 6, psy: 6, transport: 6, asso: 6, halal: 6, famille: 6, traduction: 6, banque: 6, stage: 6, assurance: 6, demenagement: 6, cvec: 6, arrivee: 6, resto: 6, medecin: 6 };
   function open(key, scroll) {
     const box = document.getElementById("pages-" + key);
     const btn = document.getElementById("btn-" + key);
